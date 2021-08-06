@@ -31,17 +31,3 @@ randPromise()
     .catch((error) => {
         logError(`error randPromise: ${error}`)
     });
-
-// randPromise()
-//     .then((result) => {
-//         logResultAndRandPromise(result)
-//             .then((result2) => {
-//                 logResultAndRandPromise(result2)
-//                     .then((result3) => {
-//                         log(`randPromise: ${result3}`);
-//                     });
-//             });
-//     })
-//     .catch((error) => {
-//         logError(`error randPromise: ${error}`)
-//     });
