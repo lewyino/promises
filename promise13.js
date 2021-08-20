@@ -1,10 +1,10 @@
-const {randPromiseResolve, log, logError} = require('./utils');
+const {randPromiseResolve, log, logError, randPromiseRejected} = require('./utils');
 
 Promise.any([
-    randPromiseResolve(),
+    randPromiseRejected(),
     randPromiseResolve(),
     randPromiseResolve(),
     new Promise(((resolve, reject) => setTimeout(reject, 1000, 'error race'))),
 ])
-    .then((result) => log('result', result))
-    .catch((error) => logError('error', error));
+    .then((result) => log(result))
+    .catch((error) => logError(error));

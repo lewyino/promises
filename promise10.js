@@ -6,5 +6,5 @@ Promise.all([
     randPromiseResolve(),
     // Promise.reject('error all'),
 ])
-.then((result) => log(result))
-.catch((error) => logError(error));
+    .then((result) => log(result))
+    .catch((error) => logError(error));
